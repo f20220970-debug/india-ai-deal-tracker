@@ -1,0 +1,34 @@
+{
+ "rounds_tracked": 46,
+ "dated_rounds_jul_nov": 39,
+ "pre_seed_seed_share_pct": 61.5,
+ "median_seed_usd_m": 2.35,
+ "median_pre_seed_usd_m": 1.5,
+ "karnataka_share_pct": 51.3,
+ "rounds_by_layer": {
+  "Application": 10,
+  "Physical AI": 7,
+  "Vertical AI": 7,
+  "Agents": 7,
+  "Infrastructure": 4,
+  "Dev tools": 3,
+  "Foundation models": 1
+ },
+ "early_rounds_by_layer": {
+  "Physical AI": 6,
+  "Application": 6,
+  "Agents": 5,
+  "Vertical AI": 5,
+  "Dev tools": 1,
+  "Infrastructure": 1
+ },
+ "agents_segments": [
+  "Enterprise employee agents",
+  "Customer service agents",
+  "Sales voice agents",
+  "Voice / chat agents",
+  "Chat agents",
+  "Sales automation",
+  "Sales automation"
+ ]
+}

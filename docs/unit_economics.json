@@ -1,0 +1,93 @@
+{
+ "assumptions": {
+  "price_per_min_inr": 6.0,
+  "stt_tts_inr": 1.2,
+  "llm_inr": 0.8,
+  "telephony_inr": 0.9,
+  "infra_support_inr": 0.6,
+  "mins_per_customer_month": 40000,
+  "cac_inr": 250000,
+  "monthly_churn": 0.03,
+  "sales_payback_target_m": 12
+ },
+ "base": {
+  "gross_margin_pct": 41.7,
+  "gross_profit_per_customer_month_inr": 100000,
+  "cac_payback_months": 2.5,
+  "ltv_to_cac": 13.3
+ },
+ "sensitivity": [
+  {
+   "price_per_min_inr": 4.0,
+   "llm_inr": 0.4,
+   "gross_margin_pct": 22.5,
+   "gross_profit_per_customer_month_inr": 36000,
+   "cac_payback_months": 6.9,
+   "ltv_to_cac": 4.8
+  },
+  {
+   "price_per_min_inr": 4.0,
+   "llm_inr": 0.8,
+   "gross_margin_pct": 12.5,
+   "gross_profit_per_customer_month_inr": 20000,
+   "cac_payback_months": 12.5,
+   "ltv_to_cac": 2.7
+  },
+  {
+   "price_per_min_inr": 4.0,
+   "llm_inr": 1.6,
+   "gross_margin_pct": -7.5,
+   "gross_profit_per_customer_month_inr": -12000,
+   "cac_payback_months": -20.8,
+   "ltv_to_cac": -1.6
+  },
+  {
+   "price_per_min_inr": 5.0,
+   "llm_inr": 0.4,
+   "gross_margin_pct": 38.0,
+   "gross_profit_per_customer_month_inr": 76000,
+   "cac_payback_months": 3.3,
+   "ltv_to_cac": 10.1
+  },
+  {
+   "price_per_min_inr": 5.0,
+   "llm_inr": 0.8,
+   "gross_margin_pct": 30.0,
+   "gross_profit_per_customer_month_inr": 60000,
+   "cac_payback_months": 4.2,
+   "ltv_to_cac": 8.0
+  },
+  {
+   "price_per_min_inr": 5.0,
+   "llm_inr": 1.6,
+   "gross_margin_pct": 14.0,
+   "gross_profit_per_customer_month_inr": 28000,
+   "cac_payback_months": 8.9,
+   "ltv_to_cac": 3.7
+  },
+  {
+   "price_per_min_inr": 6.0,
+   "llm_inr": 0.4,
+   "gross_margin_pct": 48.3,
+   "gross_profit_per_customer_month_inr": 116000,
+   "cac_payback_months": 2.2,
+   "ltv_to_cac": 15.5
+  },
+  {
+   "price_per_min_inr": 6.0,
+   "llm_inr": 0.8,
+   "gross_margin_pct": 41.7,
+   "gross_profit_per_customer_month_inr": 100000,
+   "cac_payback_months": 2.5,
+   "ltv_to_cac": 13.3
+  },
+  {
+   "price_per_min_inr": 6.0,
+   "llm_inr": 1.6,
+   "gross_margin_pct": 28.3,
+   "gross_profit_per_customer_month_inr": 68000,
+   "cac_payback_months": 3.7,
+   "ltv_to_cac": 9.1
+  }
+ ]
+}
