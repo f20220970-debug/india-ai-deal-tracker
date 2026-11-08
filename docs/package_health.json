@@ -1,0 +1,60 @@
+{
+ "date": "2026-11-08",
+ "packages": [
+  {
+   "company": "Composio",
+   "registry": "pypi",
+   "package": "composio",
+   "releases_total": 86,
+   "first_release": "2024-12-06",
+   "last_release": "2026-11-03",
+   "days_since_last": 5,
+   "releases_last_90d": 16,
+   "median_days_between_releases_12m": 6.0
+  },
+  {
+   "company": "Composio",
+   "registry": "npm",
+   "package": "@composio/core",
+   "releases_total": 156,
+   "first_release": "2025-04-21",
+   "last_release": "2026-11-03",
+   "days_since_last": 5,
+   "releases_last_90d": 16,
+   "median_days_between_releases_12m": 4.0
+  },
+  {
+   "company": "Sarvam AI",
+   "registry": "pypi",
+   "package": "sarvamai",
+   "releases_total": 189,
+   "first_release": "2025-03-07",
+   "last_release": "2026-11-07",
+   "days_since_last": 1,
+   "releases_last_90d": 51,
+   "median_days_between_releases_12m": 0.0
+  },
+  {
+   "company": "Sarvam AI",
+   "registry": "npm",
+   "package": "sarvamai",
+   "releases_total": 100,
+   "first_release": "2025-04-07",
+   "last_release": "2026-11-07",
+   "days_since_last": 1,
+   "releases_last_90d": 26,
+   "median_days_between_releases_12m": 1.0
+  },
+  {
+   "company": "Keploy",
+   "registry": "npm",
+   "package": "@keploy/sdk",
+   "releases_total": 21,
+   "first_release": "2024-02-21",
+   "last_release": "2026-11-04",
+   "days_since_last": 4,
+   "releases_last_90d": 1,
+   "median_days_between_releases_12m": null
+  }
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "date": "2026-11-09",
+ "builders": 3,
+ "by_layer": {
+  "Voice & speech": 1,
+  "Agents": 1,
+  "Physical AI": 1
+ },
+ "orgs": 2,
+ "already_in_funding_tracker": 1,
+ "ranking": "stars per 30 days of age"
+}
