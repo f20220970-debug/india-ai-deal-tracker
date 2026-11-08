@@ -51,3 +51,14 @@ def test_weekly_gain_and_one_snapshot_per_day(tmp_path, monkeypatch):
     assert len([h for h in hist if h["date"] == "2026-11-09"]) == 3
     assert json.load(open(root / "docs" / "radar_summary.json"))["ranking"] == "weekly star gain"
     REPOS[0]["stargazers_count"] = 900
+
+def test_star_spike_flagged_and_ranked_last(tmp_path, monkeypatch):
+    root = setup(tmp_path, monkeypatch)
+    REPOS.append(repo("hype", "acme-blr", 90000, created="2026-10-01", otype="User"))
+    try:
+        radar.main(today=dt.date(2026, 11, 9), fetch=fake_fetch)
+    finally:
+        REPOS.pop()
+    rows = list(csv.DictReader(open(root / "data" / "radar_latest.csv")))
+    assert rows[-1]["full_name"] == "acme-blr/hype" and rows[-1]["check_stars"] == "True"
+    assert json.load(open(root / "docs" / "radar_summary.json"))["flagged_star_spikes"] == 1

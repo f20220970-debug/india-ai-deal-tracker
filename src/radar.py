@@ -63,16 +63,20 @@ def is_product(repo):
 def search(fetch, today, min_stars=25, per_topic=100, pause=2.5):
     since = (today - dt.timedelta(days=365)).isoformat()
     seen = {}
+    # GitHub returns at most the top results per query, so each topic is searched in star bands: otherwise a few
+    # global hits crowd out smaller India-based builders
+    bands = [f"{min_stars}..99", "100..499", ">=500"]
     for t in TOPICS:
-        q = f"topic:{t}+created:>{since}+stars:>={min_stars}"
-        res = fetch(f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page={per_topic}")
-        for r in (res or {}).get("items", []):
-            seen.setdefault(r["full_name"], r)
-        time.sleep(pause)
+        for band in bands:
+            q = f"topic:{t}+created:>{since}+stars:{band}"
+            res = fetch(f"https://api.github.com/search/repositories?q={q}&sort=stars&order=desc&per_page={per_topic}")
+            for r in (res or {}).get("items", []):
+                seen.setdefault(r["full_name"], r)
+            time.sleep(pause)
     return list(seen.values())
 
 
-def locate(fetch, repos, cache, max_lookups=700):
+def locate(fetch, repos, cache, max_lookups=850):
     looked = 0
     for r in repos:
         login = r["owner"]["login"]
@@ -99,10 +103,12 @@ def score(repos, history, today, tracker_names):
             layer=layer_of(r), owner_type=r["owner"].get("type", ""),
             weekly_star_gain="" if prev is None else r["stargazers_count"] - prev,
             stars_per_30d=round(30 * r["stargazers_count"] / age, 1),
+            check_stars=bool(r["owner"].get("type") != "Organization" and 30 * r["stargazers_count"] / age > 2000),
             in_funding_tracker=any(n and n in r["full_name"].lower().replace("-", "") for n in tracker_names)))
     has_history = any(o["weekly_star_gain"] != "" for o in out)
     key = (lambda o: o["weekly_star_gain"] if o["weekly_star_gain"] != "" else -1) if has_history else (lambda o: o["stars_per_30d"])
-    return sorted(out, key=key, reverse=True)
+    # unusually fast star growth for an individual's repo is a red flag (bought or bot stars), not a top pick
+    return sorted(out, key=lambda o: (not o["check_stars"], key(o)), reverse=True)
 
 
 def publish(rows, history, today, root=None, top=40):
@@ -121,27 +127,29 @@ def publish(rows, history, today, root=None, top=40):
     summary = dict(date=today.isoformat(), builders=len(rows), by_layer=dict(sorted(by_layer.items(), key=lambda x: -x[1])),
                    orgs=sum(r["owner_type"] == "Organization" for r in rows),
                    already_in_funding_tracker=sum(r["in_funding_tracker"] for r in rows),
+                   flagged_star_spikes=sum(r["check_stars"] for r in rows),
                    ranking="weekly star gain" if any(r["weekly_star_gain"] != "" for r in rows) else "stars per 30 days of age")
     json.dump(summary, open(docs / "radar_summary.json", "w"), indent=1)
     head = "| # | Repo | Layer | Stars | Gain this week | Stars/30d | Team | Funded? |\n|---|---|---|---|---|---|---|---|\n"
     body = "".join(f"| {i} | [{r['full_name']}]({r['url']}) | {r['layer']} | {r['stars']} | {r['weekly_star_gain']} | "
                    f"{r['stars_per_30d']} | {'org' if r['owner_type']=='Organization' else 'individual'} | "
-                   f"{'in tracker' if r['in_funding_tracker'] else ''} |\n" for i, r in enumerate(rows[:top], 1))
+                   f"{'in tracker' if r['in_funding_tracker'] else ''}{' ⚠ check stars' if r['check_stars'] else ''} |\n" for i, r in enumerate(rows[:top], 1))
     (docs / "radar.md").write_text(f"# AI builder radar, {today}\n\n{summary['builders']} India-based AI repos (created in the last "
                                    f"12 months, 25+ stars), ranked by {summary['ranking']}.\n\n" + head + body)
     rows_html = "".join(f"<tr><td>{i}</td><td><a href='{html.escape(r['url'])}'>{html.escape(r['full_name'])}</a><br><small>"
                         f"{html.escape(r['description'])}</small></td><td>{r['layer']}</td><td>{r['stars']}</td>"
                         f"<td>{r['weekly_star_gain']}</td><td>{r['stars_per_30d']}</td><td>{'org' if r['owner_type']=='Organization' else 'individual'}</td>"
-                        f"<td>{'in tracker' if r['in_funding_tracker'] else ''}</td></tr>" for i, r in enumerate(rows[:top], 1))
+                        f"<td>{'in tracker' if r['in_funding_tracker'] else ''}{' ⚠ check stars' if r['check_stars'] else ''}</td></tr>" for i, r in enumerate(rows[:top], 1))
     layers = " · ".join(f"{k}: {v}" for k, v in summary["by_layer"].items())
     (docs / "index.html").write_text(f"""<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AI Builder Radar</title><style>body{{font:15px/1.5 system-ui,sans-serif;max-width:1100px;margin:auto;padding:16px;color:#1d1d1f;background:#fff}}
 table{{border-collapse:collapse;width:100%}}td,th{{border-bottom:1px solid #ddd;padding:6px;text-align:left;vertical-align:top}}small{{color:#555}}
 .k{{display:inline-block;margin:4px 14px 4px 0}}.k b{{font-size:22px;display:block}}</style></head><body>
 <h1>India AI builder radar</h1><p>Re-run every week on GitHub Actions. Finds AI repos by India-based builders (created in the last 12 months, 25+ stars),
-drops tutorials and lists, and ranks by <b>{summary['ranking']}</b>. Last run: <b>{today}</b>. A sourcing aid, not an endorsement: stars measure attention, not usage.</p>
+drops tutorials and lists, and ranks by <b>{summary['ranking']}</b>. Last run: <b>{today}</b>. A sourcing aid, not an endorsement: stars measure attention, not usage. Individual repos gaining over 2,000 stars a month are flagged "check stars" (possible bought or bot stars) and listed after the ranking.</p>
 <div><span class="k"><b>{summary['builders']}</b>builders found</span><span class="k"><b>{summary['orgs']}</b>organisations</span>
-<span class="k"><b>{summary['already_in_funding_tracker']}</b>already in funding tracker</span></div><p><small>{layers}</small></p>
+<span class="k"><b>{summary['already_in_funding_tracker']}</b>already in funding tracker</span>
+<span class="k"><b>{summary['flagged_star_spikes']}</b>flagged for star spikes</span></div><p><small>{layers}</small></p>
 <table><tr><th>#</th><th>Repo</th><th>Layer</th><th>Stars</th><th>Gain this week</th><th>Stars/30d</th><th>Team</th><th>Funded?</th></tr>{rows_html}</table>
 <p><small>Code: <a href="https://github.com/f20220970-debug/india-ai-deal-tracker">india-ai-deal-tracker</a> · funding database, market map, memo and technical diligence in the same repo.</small></p></body></html>""")
     return summary
