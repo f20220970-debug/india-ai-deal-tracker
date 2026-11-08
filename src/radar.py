@@ -21,7 +21,7 @@ INDIA = re.compile(r"\b(india|bharat|bengaluru|bangalore|mumbai|bombay|delhi|ncr
                    r"pilani|kanpur|kharagpur|roorkee|guwahati)\b", re.I)
 NOT_PRODUCT = re.compile(r"awesome|tutorial|course|roadmap|interview|cheat.?sheet|\bnotes\b|\blearn|\bbook\b|"
                          r"list of|papers|100.?days|bootcamp|homework|assignment|resume|portfolio|curated|"
-                         r"prompts? collection|examples?$", re.I)
+                         r"prompts? collection|examples?$|handbook|archives?\b|ai.?engineer\b|guide\b|playbook", re.I)
 LAYERS = [("Physical AI", r"robot|\bros2?\b|drone|uav|autonomous|embodied|slam|lidar"),
           ("Voice & speech", r"speech|voice|tts|asr|whisper|audio|text-to-speech"),
           ("Agents", r"agent|agentic|mcp|autonomous workflow|crew|multi-agent|browser.?use"),
@@ -87,6 +87,17 @@ def locate(fetch, repos, cache, max_lookups=850):
     return [r for r in repos if INDIA.search(cache.get(r["owner"]["login"], {}).get("location", ""))]
 
 
+def tracker_match(repo, tracker_names):
+    """Exact match only: owner login (or repo name) equals a tracker company, optionally with a common suffix.
+    Substring matching wrongly tagged 'originalankur' as the robotics company 'Origin'."""
+    norm = lambda x: re.sub(r"[^a-z0-9]", "", x.lower())
+    owner, name = norm(repo["owner"]["login"]), norm(repo["name"])
+    for n in tracker_names:
+        if owner in {n, n + "hq", n + "ai", n + "labs", n + "dev", n + "io", n + "inc"} or name == n:
+            return True
+    return False
+
+
 def score(repos, history, today, tracker_names):
     last = {}
     for row in history:                                     # most recent earlier snapshot per repo
@@ -104,7 +115,7 @@ def score(repos, history, today, tracker_names):
             weekly_star_gain="" if prev is None else r["stargazers_count"] - prev,
             stars_per_30d=round(30 * r["stargazers_count"] / age, 1),
             check_stars=bool(r["owner"].get("type") != "Organization" and 30 * r["stargazers_count"] / age > 2000),
-            in_funding_tracker=any(n and n in r["full_name"].lower().replace("-", "") for n in tracker_names)))
+            in_funding_tracker=tracker_match(r, tracker_names)))
     has_history = any(o["weekly_star_gain"] != "" for o in out)
     key = (lambda o: o["weekly_star_gain"] if o["weekly_star_gain"] != "" else -1) if has_history else (lambda o: o["stars_per_30d"])
     # unusually fast star growth for an individual's repo is a red flag (bought or bot stars), not a top pick

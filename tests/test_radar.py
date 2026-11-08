@@ -62,3 +62,8 @@ def test_star_spike_flagged_and_ranked_last(tmp_path, monkeypatch):
     rows = list(csv.DictReader(open(root / "data" / "radar_latest.csv")))
     assert rows[-1]["full_name"] == "acme-blr/hype" and rows[-1]["check_stars"] == "True"
     assert json.load(open(root / "docs" / "radar_summary.json"))["flagged_star_spikes"] == 1
+
+def test_tracker_match_is_exact():
+    assert radar.tracker_match(repo("x", "composiohq", 1), ["composio"])
+    assert not radar.tracker_match(repo("GenerateAgents.md", "originalankur", 1), ["origin"])
+    assert radar.is_product(repo("tool", "a", 1, desc="agent sdk")) and not radar.is_product(repo("principal-ai-engineer-handbook", "a", 1))
