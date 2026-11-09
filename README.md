@@ -14,6 +14,8 @@ Built to StemAI India's technical analyst brief: map India's AI builder ecosyste
 - **SDK shipping pace (`src/package_health.py`, weekly):** release cadence from PyPI and npm for tracker companies with public SDKs (Composio, Sarvam AI, Keploy) → `docs/package_health.md`.
 - **`src/unit_economics.py`:** gross margin, CAC payback and LTV/CAC with a price × model-cost sensitivity grid. **Inputs are illustrative assumptions.**
 
+**How the data is built, its sources and its limits:** see [METHODOLOGY.md](METHODOLOGY.md).
+
 ## Findings (from the tracker)
 | | |
 |---|---|
