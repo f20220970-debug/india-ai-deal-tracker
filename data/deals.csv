@@ -1,5 +1,5 @@
 company,week_2026,month,layer,segment,stage,amount_usd_m,lead_investor,state,source
-Simplismart,Oct 26-Nov 1,2026-10,Infrastructure,Inference optimisation,Series B,14,Dallas Venture Capital,Karnataka,StartupTalky
+Simplismart,Oct 26-Nov 1,2026-10,Infrastructure,Inference optimisation,Series B,14,Dallas Venture Capital,Karnataka,StartupTalky; verified
 Nova Spectral AI,Oct 26-Nov 1,2026-10,Physical AI,Semiconductor sensors,Seed,2.2,Shastra VC,Karnataka,StartupTalky
 Paar Autonomy,Oct 19-Nov 1,2026-10,Physical AI,Industrial / defence robotics,Seed,1.05,AdvantEdge Founders,Karnataka,StartupTalky
 CopperPilot,Oct 26-Nov 1,2026-10,Application,AI application,Pre-Seed,0.39,Neon Fund,,StartupTalky
@@ -17,7 +17,7 @@ Clueso,Oct 12-18,2026-10,Application,AI product video & docs,Series A,10,Dharana
 Shamrock AI,Oct 12-18,2026-10,Infrastructure,AI infrastructure,Seed,5,Endiya Partners,California / Telangana,StartupTalky
 Parallel Loop,Oct 12-18,2026-10,Application,AI application,Seed,6.6,3one4 Capital,,StartupTalky
 Cosmochute,Oct 12-18,2026-10,Physical AI,Service robots,Pre-Seed,1.5,Accel; Prosus Ventures,Gujarat,StartupTalky
-RevRag AI,Oct 12-18,2026-10,Agents,Sales voice agents,Seed,2.5,Accion Ventures; Cedar Hill Capital,Karnataka,StartupTalky
+RevRag AI,Oct 12-18,2026-10,Agents,In-app customer agents for lenders & insurers,Seed,2.5,Accion Ventures (lead); Cedar Hill Capital,Karnataka,StartupTalky; verified
 QpiAI,Oct 5-11,2026-10,Infrastructure,AI + quantum compute,Venture Debt,5.19,InnoVen Capital,Karnataka,StartupTalky
 Desible.ai,Oct 5-11,2026-10,Agents,Voice / chat agents,Seed,3.3,Prime Venture Partners,Karnataka,StartupTalky
 CurvetAI,Oct 5-11,2026-10,Application,Generative AI,Pre-Seed,0.62,Merak Ventures,Maharashtra,StartupTalky
@@ -27,7 +27,7 @@ Navana,Sep 1-7,2026-09,Infrastructure,Speech AI for Indian languages,Series A,4.
 Creedom,Sep 1-7,2026-09,Application,Generative AI,Seed,0.43,Raghunandan G (angel),Tamil Nadu,StartupTalky
 72 Street AI,Sep 1-7,2026-09,Vertical AI,Investment tech,Angel,0.42,Undisclosed,Maharashtra,StartupTalky
 Alteon,Sep 1-7,2026-09,Physical AI,Drones,Seed,2.5,Together Fund,Karnataka,StartupTalky
-Sarvam AI,Aug 4-10,2026-08,Foundation models,Indic LLMs & speech,Series B,75,Activate,Karnataka,StartupTalky
+Sarvam AI,Aug 4-10,2026-08,Foundation models,Indic LLMs & speech,Series B extension,74,NVIDIA (largest); Glade Brook; Gaja Capital; Activate,Karnataka,StartupTalky; corrected via Inc42 (MCA filings)
 Nyai,Aug 4-10,2026-08,Vertical AI,Legal,Seed,1.5,,Maharashtra,StartupTalky
 Superleap,Aug 4-10,2026-08,Agents,Sales automation,Seed,3.78,Peak XV Partners,Karnataka,StartupTalky
 Revspot,Jul 28-Aug 3,2026-07,Agents,Sales automation,Series A,4.8,Inflexor,Karnataka,StartupTalky
@@ -35,7 +35,7 @@ SUIND,Jul 28-Aug 3,2026-07,Physical AI,Agri drones,Seed,2.2,Transition VC,Karnat
 Fire AI,Jul 21-27,2026-07,Application,Business intelligence,Seed,0.26,SucSEED Indovation,Maharashtra,StartupTalky
 NeuralKart,Jul 21-27,2026-07,Vertical AI,Insurance,Seed,0.24,Inflection Point Ventures,Karnataka,StartupTalky
 Othor AI,Jul 14-20,2026-07,Application,BI chat,Seed,0.06,Amit Ashu (angel),Karnataka,StartupTalky
-Emergent,Jul 14-20,2026-07,Dev tools,AI app builder,Series C,130,Creaegis,Karnataka,StartupTalky
+Emergent,Jul 14-20,2026-07,Dev tools,AI app builder,Series C,130,Creaegis,Karnataka,StartupTalky; verified
 Edysor,Jul 14-20,2026-07,Vertical AI,Education,Angel,0.13,Jasmine Sarupria (angel),Rajasthan,StartupTalky
 Mowito,Jul 7-13,2026-07,Physical AI,Autonomous mobile robots,Seed,3,Version One Ventures,Karnataka / Michigan,StartupTalky
 Hang Ten Systems,,2026,Foundation models,AI systems,Seed,32,,,Inc42 (total funding)

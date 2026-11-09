@@ -17,6 +17,16 @@ How the database and radar are built, so a reader can judge how far to trust the
 - Layer and segment labels (application, agents, vertical AI, dev tools, infrastructure, foundation models, physical AI) are **my classification** from each company's stated product.
 - Refresh: the funding table is updated by hand; the market map and summary statistics regenerate from it on every push.
 
+**Spot-check against news reports (9 Nov 2026):** 4 rows checked against independent coverage.
+| Row | Tracker said | Independent source | Result |
+|---|---|---|---|
+| Emergent | USD 130M Series C, lead Creaegis | Inc42, 15 Jul 2026 | Matches |
+| RevRag AI | USD 2.5M Seed, Accion Ventures, Cedar Hill | StartupTalky news, 14 Oct 2026 | Matches; segment corrected to in-app agents for lenders and insurers |
+| Simplismart | USD 14M Series B, Dallas Venture Capital | The SaaS News, 27 Oct 2026 | Matches |
+| Sarvam AI | USD 75M Series B led by Activate | Inc42, 5 Aug 2026 (MCA filings) | **Corrected:** USD 74M *extension* of the USD 300M Series B; no named lead, NVIDIA the largest investor, Activate one participant |
+
+One in four rows needed correcting, a reminder that secondary trackers compress rounds into one line. Checked rows are marked in the `source` column.
+
 **Known limits:** two secondary sources only; small sample (39 dated rounds); investor fields often list only the lead; some company descriptions on trackers are thin.
 
 ## Builder radar (`src/radar.py`, every Monday)

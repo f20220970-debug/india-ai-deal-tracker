@@ -1,7 +1,7 @@
 """India AI deal tracker: market map + summary stats from data/deals.csv (public sources, per row)."""
 import pandas as pd, json
 d = pd.read_csv("data/deals.csv")
-weekly = d[d.source == "StartupTalky"]                     # dated rounds, Jul-Nov 2026
+weekly = d[d.source.str.startswith("StartupTalky")]                     # dated rounds, Jul-Nov 2026
 early = weekly[weekly.stage.isin(["Angel", "Pre-Seed", "Seed"])]
 out = {
  "rounds_tracked": len(d), "dated_rounds_jul_nov": len(weekly),

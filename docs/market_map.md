@@ -6,8 +6,8 @@
 - **Customer support voice agents:** Giga
 - **Enterprise agents:** Ema
 - **Enterprise employee agents:** Leena AI
+- **In-app customer agents for lenders & insurers:** RevRag AI
 - **Sales automation:** Superleap, Revspot
-- **Sales voice agents:** RevRag AI
 - **Voice / chat agents:** Desible.ai
 
 ## Application
