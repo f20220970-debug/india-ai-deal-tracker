@@ -10,7 +10,7 @@ fontsize: 10pt
 ## 1. What the deal flow says
 - **Early stage dominates:** 61.5% of the 39 dated rounds (Jul–Nov 2026) were angel, pre-seed or seed. Median seed: **USD 2.35M**; median pre-seed: **USD 1.5M**.
 - **Bengaluru is the centre:** 51% of dated rounds list Karnataka.
-- **The application layer leads:** application (10), agents (7), vertical AI (7) and physical AI (7) rounds, against 4 infrastructure and 1 foundation-model round. Physical AI is the most active at seed (6 of its 7 rounds), mostly robotics and drones.
+- **The application layer leads:** application (10), agents (7), vertical AI (7) and physical AI (7) rounds, against 4 infrastructure and 1 foundation-model round. Physical AI is the most seed-heavy layer (6 of its 7 rounds at seed or earlier, vs 60% for applications), mostly robotics and drones.
 - **Agents cluster in one workflow:** 5 of 7 agent rounds are sales or customer-service agents (Karta AI, RevRag AI, Desible.ai, Superleap, Revspot). This is the most crowded segment in the tracker.
 
 ## 2. The thesis

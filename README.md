@@ -23,7 +23,7 @@ Built to StemAI India's technical analyst brief: map India's AI builder ecosyste
 | Median seed / pre-seed | **USD 2.35M / 1.5M** |
 | Rounds listing Karnataka | **51%** |
 | Agent rounds in sales or support | **5 of 7** |
-| Most active layer at seed | **Physical AI** (6 of 7 rounds) |
+| Most seed-heavy layer | **Physical AI** (6 of its 7 rounds at seed or earlier) |
 
 **Caveat the radar respects:** stars measure attention, not usage. Composio's product repo has ~30K stars, but its own awesome-list has ~73K. The radar is a sourcing aid; diligence needs usage data.
 
