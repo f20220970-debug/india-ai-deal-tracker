@@ -7,6 +7,10 @@
 "location": "",
 "type": "User"
 },
+"0nandon": {
+"location": "National University of Singapore",
+"type": "User"
+},
 "0pen-Sourcer": {
 "location": "Meerut, India",
 "type": "User"
@@ -370,6 +374,10 @@
 "Ashutosh0x": {
 "location": "united states",
 "type": "User"
+},
+"Aspegio": {
+"location": "",
+"type": "Organization"
 },
 "AssemblyAI": {
 "location": "San Francisco",
@@ -755,6 +763,10 @@
 "location": "Melbourne, Australia",
 "type": "User"
 },
+"Dongbumlee": {
+"location": "Seattle Area",
+"type": "User"
+},
 "Dream-Machines-Robotics": {
 "location": "",
 "type": "Organization"
@@ -1015,6 +1027,10 @@
 "location": "Darmstadt",
 "type": "User"
 },
+"Gaurav-x111": {
+"location": "",
+"type": "User"
+},
 "GehaoZhang6": {
 "location": "",
 "type": "User"
@@ -1034,6 +1050,10 @@
 "GigaDuckAI": {
 "location": "Estonia",
 "type": "Organization"
+},
+"GigaEtherealos": {
+"location": "Skopje, North Macedonia",
+"type": "User"
 },
 "Gigachad-byte": {
 "location": "",
@@ -1159,9 +1179,17 @@
 "location": "India",
 "type": "Organization"
 },
+"HezaoHezao": {
+"location": "",
+"type": "User"
+},
 "HiAi-gg": {
 "location": "",
 "type": "Organization"
+},
+"HimanshuMohanty-Git24": {
+"location": "India",
+"type": "User"
 },
 "Hiruynk": {
 "location": "",
@@ -1695,6 +1723,10 @@
 "location": "Amsterdam",
 "type": "User"
 },
+"Miko997": {
+"location": "Helsinki",
+"type": "User"
+},
 "Milomilo777": {
 "location": "",
 "type": "User"
@@ -1729,6 +1761,10 @@
 },
 "MrLesk": {
 "location": "Vienna",
+"type": "User"
+},
+"Mt-Youya": {
+"location": "Shanghai China",
 "type": "User"
 },
 "Mudb0y": {
@@ -1882,6 +1918,10 @@
 "Nyx0ra": {
 "location": "",
 "type": "User"
+},
+"OWASP": {
+"location": "United States of America",
+"type": "Organization"
 },
 "OWWZO": {
 "location": "",
@@ -2455,6 +2495,10 @@
 "location": "",
 "type": "Organization"
 },
+"StayCurious-Xuan": {
+"location": "",
+"type": "User"
+},
 "Steward-Fi": {
 "location": "",
 "type": "Organization"
@@ -2577,6 +2621,10 @@
 },
 "TensorCEO": {
 "location": "\u4e2d\u56fd",
+"type": "User"
+},
+"Teolimaof": {
+"location": "",
 "type": "User"
 },
 "TestSprite": {
@@ -2731,6 +2779,10 @@
 "location": "Wherever my laptop is.",
 "type": "User"
 },
+"Vigil-SOC": {
+"location": "",
+"type": "Organization"
+},
 "VigoZhao": {
 "location": "USA",
 "type": "User"
@@ -2817,6 +2869,10 @@
 },
 "XiaoDuoYa": {
 "location": "AI",
+"type": "User"
+},
+"XiaoPuOuO": {
+"location": "New Taipei City, Taiwan",
 "type": "User"
 },
 "XiaomiMiMo": {
@@ -2947,6 +3003,10 @@
 "location": "",
 "type": "User"
 },
+"aakashadesara": {
+"location": "NYC & SF",
+"type": "User"
+},
 "aallan": {
 "location": "Exeter, UK",
 "type": "User"
@@ -3004,6 +3064,10 @@
 "type": "User"
 },
 "advai-x": {
+"location": "",
+"type": "Organization"
+},
+"adventists-ai": {
 "location": "",
 "type": "Organization"
 },
@@ -3107,6 +3171,10 @@
 "location": "Sinaloa, Mexico",
 "type": "User"
 },
+"akatz-ai": {
+"location": "",
+"type": "User"
+},
 "akivet": {
 "location": "",
 "type": "User"
@@ -3197,6 +3265,10 @@
 },
 "andrisgauracs": {
 "location": "Toronto, Canada",
+"type": "User"
+},
+"angel291592": {
+"location": "",
 "type": "User"
 },
 "angelnicolasc": {
@@ -3432,6 +3504,10 @@
 "type": "Organization"
 },
 "baigong-ai": {
+"location": "",
+"type": "User"
+},
+"baihejiangnan": {
 "location": "",
 "type": "User"
 },
@@ -3891,6 +3967,10 @@
 "location": "",
 "type": "User"
 },
+"dallay": {
+"location": "",
+"type": "Organization"
+},
 "danielbusnz": {
 "location": "Boston, MA",
 "type": "User"
@@ -4331,6 +4411,10 @@
 "location": "Rio de Janeiro, RJ",
 "type": "User"
 },
+"fedibenameur11": {
+"location": "Ariana soghra",
+"type": "User"
+},
 "feelime": {
 "location": "",
 "type": "Organization"
@@ -4378,6 +4462,10 @@
 "finewood2008": {
 "location": "shenzhen china",
 "type": "User"
+},
+"firenook-dev": {
+"location": "",
+"type": "Organization"
 },
 "fkiene": {
 "location": "",
@@ -4509,6 +4597,10 @@
 },
 "georgeguimaraes": {
 "location": "S\u00e3o Paulo, Brazil",
+"type": "User"
+},
+"get-Lucid": {
+"location": "",
 "type": "User"
 },
 "getkern": {
@@ -4644,6 +4736,10 @@
 "type": "User"
 },
 "guoguo-tju": {
+"location": "",
+"type": "User"
+},
+"gygy-open": {
 "location": "",
 "type": "User"
 },
@@ -5323,6 +5419,10 @@
 "location": "Zagreb, Croatia",
 "type": "User"
 },
+"kubai087": {
+"location": "Beijing/Shenzhen",
+"type": "User"
+},
 "kucherenko": {
 "location": "",
 "type": "User"
@@ -5354,6 +5454,10 @@
 "langfuse": {
 "location": "",
 "type": "Organization"
+},
+"laowang-wy": {
+"location": "",
+"type": "User"
 },
 "leancoderkavy": {
 "location": "Los Angeles",
@@ -5507,6 +5611,10 @@
 "location": "Canada",
 "type": "User"
 },
+"lobehub": {
+"location": "United States of America",
+"type": "Organization"
+},
 "localai-org": {
 "location": "",
 "type": "Organization"
@@ -5640,6 +5748,10 @@
 "type": "User"
 },
 "manifoldor": {
+"location": "",
+"type": "User"
+},
+"maplexrain": {
 "location": "",
 "type": "User"
 },
@@ -6647,6 +6759,10 @@
 "location": "Bangalore, India",
 "type": "Organization"
 },
+"rbartoli": {
+"location": "Cambridge, UK",
+"type": "User"
+},
 "real-stanford": {
 "location": "United States of America",
 "type": "Organization"
@@ -7303,6 +7419,10 @@
 "location": "",
 "type": "User"
 },
+"swipt-automation": {
+"location": "",
+"type": "Organization"
+},
 "swping999": {
 "location": "",
 "type": "User"
@@ -7732,6 +7852,10 @@
 "type": "User"
 },
 "victoryangzhijie": {
+"location": "",
+"type": "User"
+},
+"viet140612": {
 "location": "",
 "type": "User"
 },
@@ -8290,6 +8414,10 @@
 "zenolab124": {
 "location": "",
 "type": "User"
+},
+"zenstory-ai": {
+"location": "",
+"type": "Organization"
 },
 "zepto-labs": {
 "location": "",
