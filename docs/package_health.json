@@ -1,5 +1,5 @@
 {
- "date": "2026-11-09",
+ "date": "2026-11-16",
  "packages": [
   {
    "company": "Composio",
@@ -8,8 +8,8 @@
    "releases_total": 87,
    "first_release": "2024-12-06",
    "last_release": "2026-11-09",
-   "days_since_last": 0,
-   "releases_last_90d": 17,
+   "days_since_last": 7,
+   "releases_last_90d": 16,
    "median_days_between_releases_12m": 6.0
   },
   {
@@ -19,30 +19,30 @@
    "releases_total": 157,
    "first_release": "2025-04-21",
    "last_release": "2026-11-09",
-   "days_since_last": 0,
-   "releases_last_90d": 17,
+   "days_since_last": 7,
+   "releases_last_90d": 16,
    "median_days_between_releases_12m": 4.0
   },
   {
    "company": "Sarvam AI",
    "registry": "pypi",
    "package": "sarvamai",
-   "releases_total": 189,
+   "releases_total": 195,
    "first_release": "2025-03-07",
-   "last_release": "2026-11-07",
-   "days_since_last": 2,
-   "releases_last_90d": 51,
-   "median_days_between_releases_12m": 0.0
+   "last_release": "2026-11-13",
+   "days_since_last": 3,
+   "releases_last_90d": 57,
+   "median_days_between_releases_12m": 0.5
   },
   {
    "company": "Sarvam AI",
    "registry": "npm",
    "package": "sarvamai",
-   "releases_total": 100,
+   "releases_total": 106,
    "first_release": "2025-04-07",
-   "last_release": "2026-11-07",
-   "days_since_last": 2,
-   "releases_last_90d": 26,
+   "last_release": "2026-11-13",
+   "days_since_last": 3,
+   "releases_last_90d": 32,
    "median_days_between_releases_12m": 1.0
   },
   {
@@ -52,7 +52,7 @@
    "releases_total": 21,
    "first_release": "2024-02-21",
    "last_release": "2026-11-04",
-   "days_since_last": 5,
+   "days_since_last": 12,
    "releases_last_90d": 1,
    "median_days_between_releases_12m": null
   }
