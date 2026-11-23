@@ -1,16 +1,16 @@
 {
- "date": "2026-11-16",
- "builders": 47,
+ "date": "2026-11-23",
+ "builders": 52,
  "by_layer": {
-  "Agents": 19,
-  "Voice & speech": 12,
-  "Physical AI": 7,
+  "Agents": 20,
+  "Voice & speech": 14,
+  "Physical AI": 6,
+  "Dev tools": 5,
   "Application": 4,
-  "Dev tools": 3,
-  "Foundation models": 1,
-  "Infrastructure": 1
+  "Infrastructure": 2,
+  "Foundation models": 1
  },
- "orgs": 12,
+ "orgs": 13,
  "already_in_funding_tracker": 0,
  "flagged_star_spikes": 1,
  "ranking": "weekly star gain"
